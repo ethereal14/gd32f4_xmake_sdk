@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"gd32f4xx_it.h": "c",
+			"systick.h": "c",
+			"gd32f4xx.h": "c",
+			"stdio.h": "c",
+			"main.h": "c",
+			"gd32f4xx_usart.h": "c",
+			"gd32f4xx_rcu.h": "c"
+		},
+		"clangd.arguments": [
+			"--query-driver=D:/gcc-arm-none-eabi-10.3/bin/arm-none-eabi-gcc.exe",
+			"--compile-commands-dir=.vscode/",
+		]
+	}
+}
