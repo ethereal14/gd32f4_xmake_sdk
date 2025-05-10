@@ -94,7 +94,8 @@ rule("dump")
 
 rule("install")
     after_install(function (target) 
-        os.exec("pyocd flash --erase chip --target gd32f427zg %s", target:targetfile())
+        local str = string.format("\"reset halt; wait_halt; flash write_image erase %s 0x08000000\"", target:targetfile())
+        os.exec("openocd -f cmsis-dap.cfg -f gd32f4xx.cfg -c init -c %s   -c reset -c shutdown", str)
     end)
 
 on_clean(function()
